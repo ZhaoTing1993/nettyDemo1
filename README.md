@@ -2,7 +2,7 @@
 
 ## Socket Demo
 
-每个branch分别以不同的方式实现socket通讯，包含server端和client端代码。
+每个branch分别以不同的方式实现socket连接，包含server端和client端代码。
 
 阻塞IO的分支： master,feature/threadpool
 
