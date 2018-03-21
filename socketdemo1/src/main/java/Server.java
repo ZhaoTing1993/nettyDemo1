@@ -10,11 +10,13 @@ public class Server {
         try {
             serverSocket = new ServerSocket(PORT);
             System.out.println("服务器端启动了....");
+
+            HandlerExecutorPool pool = new HandlerExecutorPool(50, 1000);
             while (true) {
                 //进行阻塞
                 Socket socket = serverSocket.accept();
                 //启动一个线程来处理客户端请求
-                new Thread(new ServerHandler(socket)).start();
+                pool.execute(new ServerHandler(socket));
             }
         } catch (Exception e) {
             e.printStackTrace();
