@@ -8,6 +8,8 @@
 
 非阻塞IO的分支： feature/selector
 
+异步非阻塞IO的分支： feature/asyncSocketChannel
+
 ### master
 
 a very simple socket demo.
@@ -19,3 +21,7 @@ server socket handle in a TreadPool.
 ### feature/selector
 
 NIO example, register socketChannel on a selector
+
+### feature/asyncSocketChannel
+
+AIO example(Asynchronous Non-Blocking IO).Build a server with AsynchronousChannelGroup ,handle by ServerCompletionHandler in a ThreadPool.
