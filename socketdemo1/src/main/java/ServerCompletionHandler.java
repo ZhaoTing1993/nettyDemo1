@@ -17,6 +17,7 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
     private void read(AsynchronousSocketChannel channel) {
         //读取数据
         ByteBuffer buffer = ByteBuffer.allocate(1024);
+        //当IO进入可读状态时,会创建CompletionHandler并调用completed方法
         channel.read(buffer, buffer, new CompletionHandler<Integer, ByteBuffer>() {
             @Override
             public void completed(Integer resultSize, ByteBuffer attachment) {

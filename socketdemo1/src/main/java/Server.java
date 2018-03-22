@@ -27,6 +27,8 @@ public class Server {
             //绑定地址
             channel.bind(new InetSocketAddress(port));
             System.out.println("server start, port：" + port);
+            //讲IO事件的变化注册到ServerCompletionHandler,当通道进入阻塞状态后，会调用ServerCompletionHandler的completed方法，
+            //多个客户端同时连过来时，上一个Handler未处理完会在线程池中创建一个新的Handler线程去异步处理ChannelGroup中的Channel。
             channel.accept(this, new ServerCompletionHandler());
             Thread.sleep(Integer.MAX_VALUE);
         } catch (Exception e) {
