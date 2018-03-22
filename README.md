@@ -16,7 +16,7 @@ a very simple socket demo.
 
 ### feature/threadpool
 
-server socket handle in a TreadPool.
+server socket handled in a ThreadPool.
 
 ### feature/selector
 
