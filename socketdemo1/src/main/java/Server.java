@@ -1,3 +1,4 @@
+
 import java.net.InetSocketAddress;
 import java.nio.channels.AsynchronousChannelGroup;
 import java.nio.channels.AsynchronousServerSocketChannel;
@@ -13,7 +14,7 @@ public class Server {
     //线程组
     private AsynchronousChannelGroup channelGroup;
     //服务器通道
-    private AsynchronousServerSocketChannel channel;
+    public AsynchronousServerSocketChannel channel;
 
     public Server(int port) {
         try {
