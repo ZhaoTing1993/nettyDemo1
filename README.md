@@ -20,8 +20,15 @@ server socket handled in a ThreadPool.
 
 ### feature/selector
 
-NIO example, register socketChannel on a selector
+NIO example, register socketChannel on a selector.
 
 ### feature/asyncSocketChannel
 
 AIO example(Asynchronous Non-Blocking IO).Build a server with AsynchronousChannelGroup ,handle by ServerCompletionHandler in a ThreadPool.
+
+
+## Netty Demo
+
+### master
+
+official websocket netty demo. 
